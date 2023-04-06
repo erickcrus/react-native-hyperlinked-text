@@ -1,19 +1,17 @@
 # HyperlinkedText
 Text component for React Native with regex defined hyperlinks.
 
-<img src="https://user-images.githubusercontent.com/1841312/29251023-1fba71b8-8056-11e7-8bbc-1171efcab7bd.png" width="377">
-
 Heavily inspired from [react-native-hyperlink](https://github.com/obipawan/react-native-hyperlink/blob/master/README.md).
 
 The difference is that with react-native-hyperlink you use linkify which I couldn't configure to detect arbitrary regex without prefix (e.g. '1:00'). If you only need to detect regexs with prefixes (e.g. mentions with '@' or links with 'schema://') then use hyperlink. react-native-hyperlink also supports nesting `<Text>` components.
 **Important** - put only strings inside a `<HyperlinkedText>` component. There is no way to nest components right now.
 # Installation
-`npm install --save react-native-hyperlinked-text` or
-`yarn add react-native-hyperlinked-text`
+`npm install --save @erickcrus/react-native-hyperlinked-text` or
+`yarn add @erickcrus/react-native-hyperlinked-text`
 # Usage Examples
 The default behavior is to identify URLs and open web browser when they are clicked:
 ```JSX
-<HyperlinkedText>You get regular URLs handling by default - https://www.kimaia.com</HyperlinkedText>
+<HyperlinkedText>You get regular URLs handling by default - https://www.brasilbitcoin.com.br</HyperlinkedText>
 ```
 
 Configure the default link style and on press behavior:
@@ -21,7 +19,7 @@ Configure the default link style and on press behavior:
 <HyperlinkedText
   linkStyle={{color: 'red'}}
   onLinkPress=text=>window.alert(`Pressed ${text}`)
->You get regular URLs handling by default - https://www.kimaia.com</HyperlinkedText>
+>You get regular URLs handling by default - https://www.brasilbitcoin.com.br</HyperlinkedText>
 ```
 
 Pass in `linkDefs` array to configure custom regex and behavior:
@@ -36,7 +34,7 @@ Pass in `linkDefs` array to configure custom regex and behavior:
       onPress: (orig, text, url) => HyperlinkedText._openWebUrl(url)
     }
   ]}>
-  Use markdown style links [Kimaia](https://www.kimaia.com)
+  Use markdown style links [Kimaia](https://www.brasilbitcoin.com.br)
 </HyperlinkedText>
 ```
 ## Props
@@ -60,5 +58,3 @@ Each link definition is an object with the following properties:
   replaceText: (wholeMatch, ...capturingGroups) => newText /* optional - the match will be replaced with whatever you return here */  
 }
 ```
-
-<sup>&copy; 2017 [Kimaia LTD](https://www.kimaia.com)</sup>
