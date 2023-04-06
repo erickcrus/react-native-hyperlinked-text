@@ -12,6 +12,9 @@
     "prop-types": "^15.6.0",
     "ramda": "^0.24.1"
   },
+  "publishConfig":{
+    "access": "public"
+  },
   "description": "Text component for React Native with regex defined hyperlinks forked from https://github.com/Kimaia/react-native-hyperlinked-text",
   "main": "HyperlinkedText.js",
   "devDependencies": {},
