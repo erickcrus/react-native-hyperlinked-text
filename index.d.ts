@@ -1,5 +1,4 @@
-declare module "react-native-hyperlinked-text" {
-
+declare module "@erickcrus/react-native-hyperlinked-text" {
     import {StyleProp, TextStyle} from "react-native";
 
     export interface ILinkDef {
