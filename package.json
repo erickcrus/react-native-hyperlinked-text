@@ -1,6 +1,6 @@
 {
   "name": "@erickcrus/react-native-hyperlinked-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "react-native",
     "hyperlink",
@@ -19,7 +19,7 @@
   "main": "HyperlinkedText.js",
   "devDependencies": {},
   "peerDependencies": {
-    "react-native": ">=0.46.1"
+    "react-native": "*"
   },
   "scripts": {
     "test": "mocha --reporter spec"
